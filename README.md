@@ -6,7 +6,7 @@ JAS Fresh Mushroom, founded in 2026 in Bengaluru, is a sustainable agro-farm pro
 
 A professional, full-stack web application for **JAS Fresh Mushroom**, a Bengaluru-based sustainable agro-farm specializing in organic oyster mushrooms, spawn, and grow kits.
 
-![JAS Fresh Mushroom](https://images.unsplash.com/photo-1504545102780-26774c1bb073?auto=format&fit=crop&w=1200&q=80)
+![JAS Fresh Mushroom](https://res.cloudinary.com/dqcznvpuw/image/upload/v1777706003/IMG_20260417_151156_f8iudu.jpg)
 
 ---
 
