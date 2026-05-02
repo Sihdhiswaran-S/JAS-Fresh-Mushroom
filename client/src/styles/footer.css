@@ -1,0 +1,100 @@
+/* ─────────────────────────────────────────────────────────────
+   footer.css
+   Design tokens & resets that match your project theme.
+   Import once at your app root alongside Footer.jsx.
+   ───────────────────────────────────────────────────────────── */
+
+/* ── Google Font (same as your project) ── */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap');
+
+/* ── CSS Design Tokens ── */
+:root {
+  /* Brand green palette — matches your header exactly */
+  --footer-bg:              #ffffff;
+  --footer-green-dark:      #1b5e20;
+  --footer-green-primary:   #2e7d32;
+  --footer-green-light:     #f1f8f1;
+  --footer-green-tint:      rgba(230, 245, 230, 0.45);
+  --footer-green-shadow:    rgba(46, 125, 50, 0.15);
+  --footer-green-border:    rgba(46, 125, 50, 0.18);
+
+  /* Text colors — matches your body & nav text */
+  --footer-text-primary:    #1a1a1a;
+  --footer-text-muted:      #4a6b4c;
+  --footer-text-heading:    #1b5e20;
+
+  /* Typography — matches your project font */
+  --footer-font:            'Poppins', sans-serif;
+
+  /* Spacing — matches your header padding */
+  --footer-padding-x:       60px;
+  --footer-padding-y:       56px;
+
+  /* Border — matches your header border-bottom style */
+  --footer-border-top:      2px solid #2e7d32;
+  --footer-box-shadow:      0 -2px 16px rgba(46, 125, 50, 0.10);
+
+  /* Transitions — matches your nav hover speed */
+  --footer-transition:      0.25s ease;
+}
+
+/* ── Scoped Reset ── */
+footer,
+footer * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+footer {
+  font-family: var(--footer-font);
+  background-color: var(--footer-bg);
+  color: var(--footer-text-primary);
+}
+
+footer a {
+  text-decoration: none;
+  color: inherit;
+}
+
+footer ul,
+footer ol {
+  list-style: none;
+}
+
+/* ── Accessibility: focus ring using your green accent ── */
+footer a:focus-visible {
+  outline: 2px solid var(--footer-green-primary);
+  outline-offset: 4px;
+  border-radius: 6px;
+}
+
+/* ── Responsive token overrides — mirrors your header breakpoints ── */
+@media (max-width: 1199px) {
+  :root {
+    --footer-padding-x: 40px;
+    --footer-padding-y: 48px;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --footer-padding-x: 24px;
+    --footer-padding-y: 40px;
+  }
+}
+
+@media (max-width: 468px) {
+  :root {
+    --footer-padding-x: 20px;
+    --footer-padding-y: 32px;
+  }
+}
+
+/* ── Print styles ── */
+@media print {
+  footer {
+    border-top: 1px solid #2e7d32 !important;
+    box-shadow: none !important;
+  }
+}

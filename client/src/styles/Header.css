@@ -1,0 +1,292 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* ════════════════════════════
+   HEADER WRAPPER
+════════════════════════════ */
+.headermainclass {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 18px 60px;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background-image:
+    linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0.92) 0%,
+      rgba(255, 255, 255, 0.80) 50%,
+      rgba(230, 245, 230, 0.88) 100%
+    ),
+    url('https://cpur.in/blog/wp-content/uploads/2024/03/WhatsApp-Image-2024-10-11-at-12.48.06-PM-13.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-bottom: 2px solid #2e7d32;
+  box-shadow: 0 2px 16px rgba(46, 125, 50, 0.15);
+  backdrop-filter: blur(2px);
+}
+
+/* ════════════════════════════
+   LOGO TEXT (legacy h1 inside header)
+════════════════════════════ */
+.headermainclass > h1 {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+  gap: 2px;
+  flex-shrink: 0;
+}
+
+.headermainclass > h1 span {
+  font-size: 2rem;
+  font-weight: 900;
+  color: #1b5e20;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-shadow: 0 1px 4px rgba(255, 255, 255, 0.6);
+}
+
+.headermainclass > h1 samp {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 400;
+  color: #1a1a1a;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+/* ════════════════════════════
+   DESKTOP NAV
+════════════════════════════ */
+.headermainclass nav {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-wrap: nowrap;
+}
+
+/* Strip Link default anchor styles */
+.headermainclass nav a,
+.mobile-menu a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.headermainclass nav h1 {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  cursor: pointer;
+  padding: 8px 14px;
+  border-radius: 6px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  position: relative;
+  white-space: nowrap;
+  transition: color 0.25s ease, background-color 0.25s ease;
+}
+
+/* Green underline slide-in */
+.headermainclass nav h1::after {
+  content: '';
+  position: absolute;
+  bottom: 4px;
+  left: 14px;
+  right: 14px;
+  height: 2px;
+  background-color: #2e7d32;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease;
+}
+
+.headermainclass nav h1:hover {
+  color: #2e7d32;
+  background-color: rgba(241, 248, 241, 0.85);
+}
+
+.headermainclass nav h1:hover::after {
+  transform: scaleX(1);
+}
+
+/* Contact — solid green CTA button */
+.headermainclass nav a:last-child h1 {
+  color: #ffffff;
+  background-color: #2e7d32;
+  box-shadow: 0 2px 10px rgba(46, 125, 50, 0.35);
+}
+
+.headermainclass nav a:last-child h1::after {
+  display: none;
+}
+
+.headermainclass nav a:last-child h1:hover {
+  background-color: #1b5e20;
+  color: #ffffff;
+}
+
+/* ════════════════════════════
+   HAMBURGER BUTTON
+════════════════════════════ */
+.burger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.7);
+  border: 2px solid #2e7d32;
+  border-radius: 8px;
+  cursor: pointer;
+  padding: 0;
+  flex-shrink: 0;
+  transition: background 0.2s ease;
+}
+
+.burger:hover {
+  background-color: #f1f8f1;
+}
+
+.burger__bar {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background-color: #2e7d32;
+  border-radius: 2px;
+  transform-origin: center;
+  transition: transform 0.3s ease, opacity 0.3s ease, width 0.3s ease;
+}
+
+/* Animate to X when open */
+.burger--open .burger__bar:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.burger--open .burger__bar:nth-child(2) { opacity: 0; width: 0; }
+.burger--open .burger__bar:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* ════════════════════════════
+   MOBILE DROPDOWN MENU
+════════════════════════════ */
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  width: 100%;
+  background-image:
+    linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.95),
+      rgba(240, 248, 240, 0.98)
+    ),
+    url('https://cpur.in/blog/wp-content/uploads/2024/03/WhatsApp-Image-2024-10-11-at-12.48.06-PM-13.jpeg');
+  background-size: cover;
+  background-position: center top;
+  border-bottom: 2px solid #2e7d32;
+  box-shadow: 0 8px 20px rgba(46, 125, 50, 0.12);
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transition: max-height 0.35s ease, opacity 0.3s ease;
+}
+
+.mobile-menu--open {
+  max-height: 400px;
+  opacity: 1;
+}
+
+.mobile-menu h1 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 14px 24px;
+  cursor: pointer;
+  border-left: 4px solid transparent;
+  transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.mobile-menu h1:hover {
+  color: #2e7d32;
+  background-color: rgba(241, 248, 241, 0.8);
+  border-left-color: #2e7d32;
+}
+
+/* Contact item in mobile — solid green */
+.mobile-menu a:last-child h1 {
+  color: #ffffff;
+  background-color: #2e7d32;
+  margin: 12px 24px 16px;
+  border-radius: 6px;
+  text-align: center;
+  border-left: none;
+}
+
+.mobile-menu a:last-child h1:hover {
+  background-color: #1b5e20;
+}
+
+/* ════════════════════════════
+   RESPONSIVE BREAKPOINTS
+════════════════════════════ */
+
+/* Large desktop */
+@media (min-width: 1200px) {
+  .headermainclass {
+    padding: 18px 80px;
+  }
+}
+
+/* Medium screens */
+@media (max-width: 1199px) {
+  .headermainclass {
+    padding: 16px 40px;
+  }
+  .headermainclass nav h1 {
+    font-size: 0.8rem;
+    padding: 8px 10px;
+  }
+}
+
+/* Tablet */
+@media (max-width: 899px) {
+  .headermainclass {
+    padding: 14px 24px;
+  }
+  .headermainclass > h1 span {
+    font-size: 1.6rem;
+  }
+  .headermainclass nav h1 {
+    font-size: 0.75rem;
+    padding: 6px 8px;
+    letter-spacing: 0.02em;
+  }
+}
+
+/* Mobile */
+@media (max-width: 468px) {
+  .headermainclass {
+    padding: 14px 20px;
+  }
+  .headermainclass nav {
+    display: none;
+  }
+  .burger {
+    display: flex;
+  }
+  .mobile-menu {
+    display: flex;
+  }
+}

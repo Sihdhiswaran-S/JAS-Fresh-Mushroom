@@ -1,0 +1,930 @@
+/* ════════════════════════════════════════
+   BENEFITS PAGE — JAS Fresh Mushroom
+   Consistent: Poppins · #2e7d32 · #1b5e20 · white bg
+════════════════════════════════════════ */
+
+/* ── Shared tag pill ── */
+.bn-tag {
+  display: inline-block;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #2e7d32;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  background-color: rgba(46, 125, 50, 0.08);
+  border: 1px solid rgba(46, 125, 50, 0.22);
+  padding: 5px 14px;
+  border-radius: 20px;
+  width: fit-content;
+  margin-bottom: 14px;
+}
+
+/* ── Section title ── */
+.bn-section-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.1rem;
+  font-weight: 900;
+  color: #1a1a1a;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin-bottom: 16px;
+}
+.bn-section-title span { color: #2e7d32; }
+
+@keyframes bnFadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ════════════════════
+   HERO
+════════════════════ */
+.bn-hero {
+  position: relative;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+   background-image:
+  url('https://res.cloudinary.com/dqcznvpuw/image/upload/v1776157128/IMG20260325173205_wablqr.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  overflow: hidden;
+  /* background-image:
+    url('https://images.unsplash.com/photo-1476718406336-bb5a9690ee2a?auto=format&fit=crop&w=1600&q=80');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  overflow: hidden; */
+}
+
+.bn-hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(27, 94, 32, 0.88) 0%,
+    rgba(0, 0, 0, 0.50) 100%
+  );
+}
+
+.bn-hero__content {
+  position: relative;
+  z-index: 2;
+  max-width: 780px;
+  padding: 70px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  animation: bnFadeUp 0.8s ease both;
+}
+
+.bn-hero__content .bn-tag {
+  color: #a5d6a7;
+  background: rgba(255,255,255,0.1);
+  border-color: rgba(255,255,255,0.25);
+}
+
+.bn-hero__title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 3rem;
+  font-weight: 900;
+  color: #ffffff;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+.bn-hero__title span { color: #a5d6a7; }
+
+.bn-hero__sub {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  color: rgba(255,255,255,0.85);
+  line-height: 1.75;
+  max-width: 600px;
+}
+
+.bn-hero__pills {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 6px;
+}
+
+.bn-hero__pills span {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #1b5e20;
+  background: rgba(255,255,255,0.92);
+  padding: 6px 16px;
+  border-radius: 20px;
+  letter-spacing: 0.04em;
+}
+
+/* ════════════════════
+   INTRO
+════════════════════ */
+.bn-intro {
+  display: flex;
+  align-items: center;
+  gap: 70px;
+  padding: 90px 80px;
+  background: #ffffff;
+}
+
+.bn-intro__text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.bn-intro__text p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.95rem;
+  color: #444;
+  line-height: 1.82;
+  margin-bottom: 14px;
+}
+
+.bn-intro__text em {
+  color: #1b5e20;
+  font-style: italic;
+  font-weight: 600;
+}
+
+.bn-intro__img-wrap {
+  flex-shrink: 0;
+  width: 400px;
+  position: relative;
+}
+
+.bn-intro__img-wrap img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  border-radius: 18px;
+  display: block;
+  box-shadow: 0 20px 52px rgba(46, 125, 50, 0.18);
+}
+
+.bn-intro__quote {
+  position: absolute;
+  bottom: -22px;
+  left: -22px;
+  background: #2e7d32;
+  color: #ffffff;
+  padding: 18px 22px;
+  border-radius: 12px;
+  max-width: 220px;
+  box-shadow: 0 8px 24px rgba(46,125,50,0.35);
+}
+
+.bn-intro__quote-mark {
+  font-family: Georgia, serif;
+  font-size: 2.8rem;
+  color: rgba(255,255,255,0.4);
+  line-height: 0.8;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.bn-intro__quote p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 500;
+  font-style: italic;
+  color: rgba(255,255,255,0.9);
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* ════════════════════
+   NUTRITION TABLE
+════════════════════ */
+.bn-nutrition {
+  padding: 90px 80px;
+  background: linear-gradient(135deg, #f9fdf9, #f1f8f1);
+}
+
+.bn-nutrition__header {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.bn-nutrition__sub {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.92rem;
+  color: #555;
+  line-height: 1.7;
+  max-width: 560px;
+  text-align: center;
+  margin-bottom: 44px;
+}
+
+.bn-nutrition__grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 18px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.bn-nutr-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 28px 16px;
+  background: #ffffff;
+  border: 1px solid #e8f5e9;
+  border-radius: 14px;
+  gap: 6px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  animation: bnFadeUp 0.5s ease both;
+}
+
+.bn-nutr-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 32px rgba(46,125,50,0.12);
+  border-color: #2e7d32;
+}
+
+.bn-nutr-card__value {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: #2e7d32;
+  line-height: 1;
+}
+
+.bn-nutr-card__label {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  text-align: center;
+}
+
+.bn-nutr-card__per {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.65rem;
+  color: #999;
+  letter-spacing: 0.05em;
+}
+
+.bn-nutrition__note {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.72rem;
+  color: #999;
+  text-align: center;
+  margin-top: 28px;
+  letter-spacing: 0.02em;
+}
+
+/* ════════════════════
+   HEALTH BENEFITS
+════════════════════ */
+.bn-benefits {
+  padding: 90px 80px;
+  background: #ffffff;
+}
+
+.bn-benefits__header {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.bn-benefits__sub {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.9rem;
+  color: #888;
+  margin-bottom: 40px;
+  letter-spacing: 0.02em;
+}
+
+.bn-benefits__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Benefit accordion card */
+.bn-benefit-card {
+  border: 1.5px solid #e8f5e9;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #fafff8;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+  position: relative;
+}
+
+.bn-benefit-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: var(--accent, #2e7d32);
+  border-radius: 14px 0 0 14px;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.bn-benefit-card:hover,
+.bn-benefit-card--open {
+  box-shadow: 0 8px 28px rgba(0,0,0,0.08);
+  border-color: #a5d6a7;
+}
+
+.bn-benefit-card--open::before {
+  opacity: 1;
+}
+
+.bn-benefit-card__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 22px;
+  gap: 14px;
+}
+
+.bn-benefit-card__left {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.bn-benefit-card__icon {
+  font-size: 1.7rem;
+  line-height: 1;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.bn-benefit-card__title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.98rem;
+  font-weight: 800;
+  color: #1a1a1a;
+  margin-bottom: 3px;
+  transition: color 0.25s ease;
+}
+
+.bn-benefit-card--open .bn-benefit-card__title {
+  color: var(--accent, #2e7d32);
+}
+
+.bn-benefit-card__summary {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.8rem;
+  color: #777;
+  line-height: 1.5;
+}
+
+.bn-benefit-card__toggle {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #2e7d32;
+  flex-shrink: 0;
+  line-height: 1;
+  transition: transform 0.3s ease;
+}
+
+/* Accordion body */
+.bn-benefit-card__body {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 22px;
+  transition: max-height 0.4s ease, padding 0.3s ease;
+}
+
+.bn-benefit-card--open .bn-benefit-card__body {
+  max-height: 500px;
+  padding: 0 22px 22px;
+}
+
+.bn-benefit-card__body p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.88rem;
+  color: #444;
+  line-height: 1.8;
+  border-top: 1px solid #e8f5e9;
+  padding-top: 14px;
+}
+
+/* ════════════════════
+   VITAMINS
+════════════════════ */
+.bn-vitamins {
+  padding: 90px 80px;
+  background: linear-gradient(135deg, #f1f8f1, #e8f5e9);
+}
+
+.bn-vitamins__header {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 48px;
+}
+
+.bn-vitamins__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.bn-vitamin-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  padding: 36px 24px;
+  background: #ffffff;
+  border: 1px solid #c8e6c9;
+  border-radius: 16px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bn-vitamin-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 36px rgba(46,125,50,0.12);
+}
+
+.bn-vitamin-card__icon { font-size: 2.2rem; }
+
+.bn-vitamin-card h4 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #1b5e20;
+}
+
+.bn-vitamin-card p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.82rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* ════════════════════
+   COMPARISON TABLE
+════════════════════ */
+.bn-compare {
+  padding: 90px 80px;
+  background: #ffffff;
+}
+
+.bn-compare__header {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.bn-compare__table-wrap {
+  overflow-x: auto;
+  border-radius: 14px;
+  border: 1px solid #e8f5e9;
+  box-shadow: 0 4px 20px rgba(46,125,50,0.07);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.bn-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'Poppins', sans-serif;
+}
+
+.bn-table thead tr {
+  background: #2e7d32;
+}
+
+.bn-table thead th {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #ffffff;
+  padding: 14px 20px;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.bn-table thead th:first-child { text-align: left; }
+
+.bn-table tbody tr {
+  border-bottom: 1px solid #f1f8f1;
+  transition: background 0.2s ease;
+}
+
+.bn-table tbody tr:last-child { border-bottom: none; }
+
+.bn-table tbody tr:hover { background: #f9fdf9; }
+
+.bn-table tbody td {
+  font-size: 0.85rem;
+  color: #444;
+  padding: 13px 20px;
+  text-align: center;
+}
+
+.bn-table tbody td:first-child {
+  text-align: left;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+/* Oyster mushroom column highlight */
+.bn-table__highlight {
+  color: #1b5e20 !important;
+  font-weight: 700 !important;
+  background: rgba(46,125,50,0.06);
+}
+
+.bn-compare__note {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.72rem;
+  color: #999;
+  text-align: center;
+  margin-top: 18px;
+}
+
+/* ════════════════════
+   FAQ
+════════════════════ */
+.bn-faq {
+  padding: 90px 80px;
+  background: linear-gradient(135deg, #f9fdf9, #f1f8f1);
+}
+
+.bn-faq__header {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 48px;
+}
+
+.bn-faq__list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+.bn-faq__item {
+  background: #ffffff;
+  border: 1.5px solid #e8f5e9;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.bn-faq__item:hover,
+.bn-faq__item--open {
+  box-shadow: 0 6px 22px rgba(46,125,50,0.1);
+  border-color: #2e7d32;
+}
+
+.bn-faq__question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 22px;
+  gap: 16px;
+}
+
+.bn-faq__question span:first-child {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  line-height: 1.45;
+  transition: color 0.25s ease;
+}
+
+.bn-faq__item--open .bn-faq__question span:first-child {
+  color: #1b5e20;
+}
+
+.bn-faq__icon {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 300;
+  color: #2e7d32;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.bn-faq__answer {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 22px;
+  transition: max-height 0.4s ease, padding 0.3s ease;
+}
+
+.bn-faq__item--open .bn-faq__answer {
+  max-height: 300px;
+  padding: 0 22px 20px;
+}
+
+.bn-faq__answer p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.87rem;
+  color: #555;
+  line-height: 1.8;
+  border-top: 1px solid #e8f5e9;
+  padding-top: 14px;
+}
+
+/* ════════════════════
+   CTA
+════════════════════ */
+.bn-cta {
+  background: linear-gradient(135deg, #1b5e20 0%, #2e7d32 60%, #388e3c 100%);
+  padding: 80px 40px;
+  text-align: center;
+}
+
+.bn-cta__content {
+  max-width: 680px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
+.bn-cta__content h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.1rem;
+  font-weight: 900;
+  color: #ffffff;
+  line-height: 1.2;
+}
+
+.bn-cta__content p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.95rem;
+  color: rgba(255,255,255,0.82);
+  line-height: 1.7;
+}
+
+.bn-cta__btns {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 8px;
+}
+
+.bn-cta__btn {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  padding: 13px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.25s ease;
+}
+
+.bn-cta__btn--primary {
+  background: #ffffff;
+  color: #1b5e20;
+}
+
+.bn-cta__btn--outline {
+  background: transparent;
+  color: #ffffff;
+  border: 2px solid rgba(255,255,255,0.6);
+}
+
+.bn-cta__btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 28px rgba(0,0,0,0.2);
+}
+
+/* ════════════════════════════════════════
+   RESPONSIVE
+════════════════════════════════════════ */
+@media (max-width: 1199px) {
+  .bn-intro        { padding: 70px 48px; gap: 48px; }
+  .bn-nutrition    { padding: 70px 48px; }
+  .bn-benefits     { padding: 70px 48px; }
+  .bn-vitamins     { padding: 70px 48px; }
+  .bn-compare      { padding: 70px 48px; }
+  .bn-faq          { padding: 70px 48px; }
+  .bn-nutrition__grid { grid-template-columns: repeat(4, 1fr); }
+}
+
+@media (max-width: 960px) {
+  .bn-hero__title  { font-size: 2.3rem; }
+  .bn-intro        { flex-direction: column; padding: 56px 32px; }
+  .bn-intro__img-wrap { width: 100%; }
+  .bn-intro__img-wrap img { height: 300px; }
+  .bn-intro__quote { left: 12px; bottom: -16px; }
+  .bn-benefits__grid  { grid-template-columns: 1fr; }
+  .bn-vitamins__grid  { grid-template-columns: repeat(2, 1fr); }
+  .bn-nutrition__grid { grid-template-columns: repeat(3, 1fr); }
+  .bn-section-title { font-size: 1.8rem; }
+}
+
+@media (max-width: 640px) {
+  .bn-hero__title    { font-size: 1.7rem; }
+  .bn-intro          { padding: 44px 20px; }
+  .bn-nutrition      { padding: 50px 20px; }
+  .bn-nutrition__grid { grid-template-columns: repeat(2, 1fr); }
+  .bn-benefits       { padding: 50px 20px; }
+  .bn-vitamins       { padding: 50px 20px; }
+  .bn-vitamins__grid { grid-template-columns: 1fr; }
+  .bn-compare        { padding: 50px 20px; }
+  .bn-faq            { padding: 50px 20px; }
+  .bn-cta            { padding: 56px 20px; }
+  .bn-cta__content h2 { font-size: 1.6rem; }
+  .bn-section-title  { font-size: 1.5rem; }
+}
+
+
+/* ════════════════════════════════════════
+   NEW ADDITIONS (appended — nothing above changed)
+════════════════════════════════════════ */
+
+/* ── %DV badge on nutrition cards ── */
+.bn-nutr-card--dv {
+  border-color: #a5d6a7;
+  background: #f1f8f1;
+}
+
+.bn-nutr-card__dv-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.58rem;
+  font-weight: 700;
+  color: #ffffff;
+  background: #2e7d32;
+  padding: 2px 6px;
+  border-radius: 10px;
+  letter-spacing: 0.06em;
+}
+
+/* Make nutrition cards relative so badge positions correctly */
+.bn-nutr-card { position: relative; }
+
+/* ── Study stat pill inside benefit cards ── */
+.bn-benefit-card__stat {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #1b5e20;
+  background: rgba(46,125,50,0.1);
+  border: 1px solid rgba(46,125,50,0.22);
+  border-radius: 20px;
+  padding: 6px 14px;
+  margin-bottom: 12px;
+  width: fit-content;
+}
+
+/* ════════════════════
+   COOKING SECTION (new)
+════════════════════ */
+.bn-cooking {
+  padding: 90px 80px;
+  background: linear-gradient(135deg, #f9fdf9, #f1f8f1);
+}
+
+.bn-cooking__header {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.bn-cooking__sub {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.92rem;
+  color: #555;
+  line-height: 1.7;
+  max-width: 560px;
+  text-align: center;
+  margin-bottom: 44px;
+}
+
+.bn-cooking__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  max-width: 1000px;
+  margin: 0 auto 36px;
+}
+
+.bn-cooking-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 32px 26px;
+  background: #ffffff;
+  border: 1px solid #e8f5e9;
+  border-radius: 16px;
+  animation: bnFadeUp 0.5s ease both;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.bn-cooking-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 36px rgba(46,125,50,0.12);
+  border-color: #2e7d32;
+}
+
+.bn-cooking-card__icon {
+  font-size: 2.1rem;
+  line-height: 1;
+}
+
+.bn-cooking-card h4 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #1b5e20;
+}
+
+.bn-cooking-card p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.84rem;
+  color: #555;
+  line-height: 1.68;
+}
+
+/* Quick tip strip */
+.bn-cooking__tip {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  max-width: 1000px;
+  margin: 0 auto;
+  background: #ffffff;
+  border: 1px solid #a5d6a7;
+  border-left: 4px solid #2e7d32;
+  border-radius: 10px;
+  padding: 16px 22px;
+}
+
+.bn-cooking__tip span:first-child {
+  font-size: 1.3rem;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.bn-cooking__tip p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.87rem;
+  color: #444;
+  line-height: 1.65;
+}
+
+.bn-cooking__tip strong {
+  color: #1b5e20;
+}
+
+/* ── Responsive additions ── */
+@media (max-width: 1199px) {
+  .bn-cooking { padding: 70px 48px; }
+  .bn-cooking__grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 640px) {
+  .bn-cooking { padding: 50px 20px; }
+  .bn-cooking__grid { grid-template-columns: 1fr; }
+}
