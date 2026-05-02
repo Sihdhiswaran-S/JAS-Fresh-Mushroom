@@ -1,0 +1,6 @@
+/* ── Strip Link default styles (add to bottom of Header.css) ── */
+.headermainclass nav a,
+.mobile-menu a {
+  text-decoration: none;
+  color: inherit;
+}
